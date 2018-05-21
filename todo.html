@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app="todoApp" ng-controller="todoController">
+<head>
+	<title>myPage</title>
+	<meta charset="utf-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	<script src="todo.js"></script> 
+  <script src="angular-cookies/angular-cookies.js"></script>
+	<link rel="stylesheet" type="text/css" href="todoStyle.css">
+</head>
+<body>
+	<div class='header'>
+		<h1>My ToDo List with Angular.</h1>
+	</div>
+	
+  <!-- <div class="colorOptions">
+    <p class="red" onclick="setColor(red)">red</p><p class="blue" onclick="setColor(blue)">blue</p><p class="green" onclick="setColor(green)">green</p>
+  </div> -->
+<div  class='wrapper'>
+    <form ng-submit="add()" id='form1'>
+  		<input ng-model="title"></span><button class="button-add">Add</button>
+  	</form>
+  	<form class='filter'><p>
+  		<input type="radio" name='filter' value="all" ng-model='mode'>Все<br>
+  		<input type="radio" name='filter' value="doing" ng-model='mode'>Выполненные<br>
+  		<input type='radio' name='filter' value="notDoing" ng-model='mode'>Невыполненные<br>	
+  		  </p>
+  	</form>
+    <button onclick="setColor()" class="button-red">make YELLOW</button>
+  	<button ng-click="delete()" class="button-del">Delete</button>
+  	<button ng-click='delDoing()' class="button-del">DelDoing</button>
+    <button ng-click="writeCookies()" class='button-add' >AddCookie</button>
+    <button ng-click="loadFromCookie()" class="button-add">loadFromCookie</button>
+    <button ng-click="maxTaskID()" class="button-del" >getMaxValue</button>
+    <!-- <input type="text" name="" ng-model="info"> -->
+  	<!-- <input type="text" ng-model="letter"> -->
+    <p>Добавленные в куки : </p>
+    <textarea ng-model="cookies" cols="80" rows="6" name="cookie">
+      
+    </textarea>
+    <ul>
+        <li ng-repeat="t in tasks | filterByMode: mode track by $index"><input type="checkbox" ng-model='t.done'><span class='done-{{t.done}}'>{{ t.title}} {{t.id}}<span class="index">{{$index}}</span></span><button ng-click="deleteTwo(t)">Delete</button></li>
+    </ul>
+    <p> Общее количество заданий : {{ count }}</p>
+</div>
+<div class="footer"> </div>
+</body>
+</html>

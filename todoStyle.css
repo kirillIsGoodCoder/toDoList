@@ -1,0 +1,118 @@
+body {
+	background-image: linear-gradient( to left bottom, white, #44944A);
+}
+
+.header{
+	background-image: linear-gradient(75deg, white, blue);
+}
+
+.wrapper{
+	background-color: #ccdfe0;
+	padding:50px;
+	margin-top: 70px;
+	margin-left:50px;
+	margin-bottom: 50px;
+	color: black;
+	font-size: 20px;
+	border: 2px solid green;
+	border-radius: 10px;
+	min-height:500px;
+	list-style: none;
+}
+.wrapper li {
+	height:30px;
+	width:400px;
+}
+ul{
+	list-style-type: none;
+}
+
+button{
+	font-size: 15px;
+}
+.wrapper #form1 button{
+	margin:10px 20px 10px;
+}
+.wrapper #form1 input{
+	height: 20px;
+	min-width:150px;
+}
+
+.header > h1{
+	color:green;
+	font-weight: bold;
+	font-size:40px;
+	text-align:center;
+}
+.footer{
+	min-height:50px;
+	margin-top:10px;
+	margin-bottom: 0px;
+}
+.filter{
+	color:green;
+}
+
+.done-true {
+  text-decoration: line-through;
+  color: blue;
+}
+.index{
+	color:green;
+	font-size: 10px;
+}
+.button-add{
+	min-width:80px;
+	min-height:32px;
+	border-radius: 15px;
+	border:none;
+	background-color: #70E500;
+}
+.button-del{
+	min-width:80px;
+	min-height:32px;
+	border-radius: 15px;
+	border:none;
+	background-image: linear-gradient(to right top ,#00BBD6, #EBFFFF);
+	/*background-color: ;*/	
+}
+.button-red{
+	min-width: 80px;
+	min-height: 32px;
+	border-radius: 15px;
+	border: none;
+	color: blue;
+	background-image: linear-gradient(to right top, green, #A60000);/*#BF3030*/
+}
+
+/* colorOptions */
+/*.colorOptions{
+	width:300px;
+	height:50px;
+	padding-top-bottom:3px;
+	padding-left: 30px;
+	border:2px dotted green;
+}
+.colorOptions p {
+	display: block;
+	color:white;
+	background-color: red;
+	z-index: 1000;
+	font-size: 12px;
+	margin: 2px;
+	min-height:40px;
+	min-width: 40px;
+}
+.colorOptions p .red {
+	background-color: red;
+}
+.colorOptions p .green{
+	background-color: green;
+}
+.colorOptions p .blue{
+	background-color: blue;
+}
+*/
+
+
+
